@@ -1,0 +1,581 @@
+/* ==============================
+   ELECTROHOGAR - ESTILOS GENERALES
+   ============================== */
+
+:root {
+    --azul-oscuro: #172b4d;
+    --azul: #2457a6;
+    --celeste: #eaf2ff;
+    --naranja: #ff9f43;
+    --texto: #253047;
+    --gris: #667085;
+    --fondo: #f7f9fc;
+    --blanco: #ffffff;
+    --sombra: 0 12px 32px rgba(23, 43, 77, 0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--texto);
+    background-color: var(--fondo);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--blanco);
+    padding: 18px 0;
+}
+
+.header__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--azul-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.logo__icono {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    color: var(--blanco);
+    background: var(--azul);
+}
+
+.logo__acento {
+    color: var(--azul);
+}
+
+.header__mensaje {
+    color: var(--gris);
+    font-size: 0.92rem;
+}
+
+/* NAVEGACIÓN */
+.navegacion {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: var(--azul-oscuro);
+}
+
+.navegacion__lista {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 38px;
+    list-style: none;
+    padding: 15px 0;
+}
+
+.navegacion a {
+    color: var(--blanco);
+    font-size: 0.94rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.navegacion a:hover {
+    color: var(--naranja);
+}
+
+/* PORTADA */
+.portada {
+    overflow: hidden;
+    background: linear-gradient(115deg, #eaf2ff 0%, #f7f9fc 58%, #dceaff 100%);
+    padding: 66px 0;
+}
+
+.portada__contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.etiqueta {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--azul);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+.portada h1,
+.encabezado-seccion h2,
+.nosotros h2,
+.contacto h2 {
+    font-family: "Manrope", sans-serif;
+    line-height: 1.15;
+}
+
+.portada h1 {
+    max-width: 570px;
+    margin-bottom: 18px;
+    color: var(--azul-oscuro);
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    font-weight: 800;
+}
+
+.portada h1 span {
+    color: var(--azul);
+}
+
+.portada__texto > p {
+    max-width: 500px;
+    margin-bottom: 27px;
+    color: var(--gris);
+    font-size: 1.05rem;
+}
+
+.portada__imagen img {
+    width: 100%;
+    height: 360px;
+    border-radius: 26px;
+    object-fit: cover;
+    box-shadow: var(--sombra);
+}
+
+.boton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 10px;
+    padding: 13px 21px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+}
+
+.boton--principal {
+    color: var(--blanco);
+    background-color: var(--azul);
+}
+
+.boton--principal:hover {
+    background-color: var(--azul-oscuro);
+}
+
+/* SECCIONES */
+.seccion {
+    padding: 76px 0;
+}
+
+.encabezado-seccion {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.encabezado-seccion h2,
+.contacto h2,
+.nosotros h2 {
+    margin-bottom: 12px;
+    color: var(--azul-oscuro);
+    font-size: clamp(1.8rem, 3vw, 2.45rem);
+}
+
+.encabezado-seccion p {
+    color: var(--gris);
+}
+
+/* PRODUCTOS: FLEXBOX */
+.productos__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.producto {
+    flex: 1 1 290px;
+    max-width: 350px;
+    overflow: hidden;
+    border: 1px solid #e9edf4;
+    border-radius: 17px;
+    background-color: var(--blanco);
+    box-shadow: 0 7px 22px rgba(23, 43, 77, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.producto__imagen {
+    position: relative;
+    overflow: hidden;
+    background-color: #edf1f7;
+}
+
+.producto__imagen img {
+    width: 100%;
+    height: 205px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover .producto__imagen img {
+    transform: scale(1.04);
+}
+
+.producto__tag {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color: var(--azul-oscuro);
+    background-color: var(--blanco);
+    font-size: 0.72rem;
+    font-weight: 700;
+}
+
+.producto__info {
+    padding: 19px;
+}
+
+.producto__categoria {
+    color: var(--azul);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.producto h3 {
+    margin: 5px 0 7px;
+    color: var(--azul-oscuro);
+    font-family: "Manrope", sans-serif;
+    font-size: 1.12rem;
+}
+
+.producto__info > p {
+    min-height: 48px;
+    color: var(--gris);
+    font-size: 0.9rem;
+}
+
+.producto__pie {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 17px;
+    padding-top: 14px;
+    border-top: 1px solid #edf0f5;
+}
+
+.producto__pie strong {
+    color: var(--azul-oscuro);
+    font-size: 1.1rem;
+}
+
+.producto__pie a {
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: var(--azul);
+    background-color: var(--celeste);
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.nota-precios {
+    margin-top: 22px;
+    color: var(--gris);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+/* NOSOTROS */
+.nosotros {
+    padding: 65px 0;
+    color: var(--blanco);
+    background: linear-gradient(120deg, #172b4d, #2457a6);
+}
+
+.nosotros__contenido {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.etiqueta--clara {
+    color: #a9caff;
+}
+
+.nosotros h2 {
+    max-width: 440px;
+    color: var(--blanco);
+}
+
+.nosotros__contenido > p {
+    color: #e1eaff;
+    font-size: 1.02rem;
+}
+
+/* RESEÑAS: CSS GRID */
+.resenas {
+    background-color: var(--blanco);
+}
+
+.resenas__lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.resena {
+    border: 1px solid #e9edf4;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: var(--fondo);
+}
+
+.resena__estrellas {
+    margin-bottom: 13px;
+    color: #f2a93b;
+    letter-spacing: 3px;
+}
+
+.resena p {
+    min-height: 75px;
+    color: var(--gris);
+}
+
+.resena h3 {
+    margin-top: 15px;
+    color: var(--azul-oscuro);
+    font-size: 1rem;
+}
+
+.resena span {
+    color: var(--gris);
+    font-size: 0.82rem;
+}
+
+/* CONTACTO */
+.contacto {
+    background-color: #edf3fc;
+}
+
+.contacto__contenido {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 65px;
+}
+
+.contacto__texto > p {
+    max-width: 440px;
+    color: var(--gris);
+}
+
+.contacto__dato {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #e6ebf3;
+    border-radius: 17px;
+    padding: 27px;
+    background-color: var(--blanco);
+    box-shadow: var(--sombra);
+}
+
+.formulario label {
+    margin-top: 5px;
+    color: var(--azul-oscuro);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    border: 1px solid #d8dfeb;
+    border-radius: 9px;
+    outline: none;
+    padding: 12px 13px;
+    color: var(--texto);
+    background-color: #fbfcfe;
+    font: inherit;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(36, 87, 166, 0.12);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.formulario button {
+    margin-top: 10px;
+}
+
+/* FOOTER */
+.footer {
+    padding: 25px 0;
+    color: #dce6f5;
+    background-color: #12223d;
+}
+
+.footer__contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo--footer {
+    color: var(--blanco);
+    font-size: 1.15rem;
+}
+
+.logo--footer .logo__acento {
+    color: #9fc1ff;
+}
+
+.logo--footer .logo__icono {
+    color: var(--azul-oscuro);
+    background-color: #9fc1ff;
+}
+
+.footer p,
+.footer > div > a:last-child {
+    font-size: 0.82rem;
+}
+
+.footer > div > a:last-child {
+    color: #ffffff;
+}
+
+/* DISEÑO RESPONSIVO: TABLETS */
+@media (max-width: 800px) {
+    .portada__contenido,
+    .nosotros__contenido,
+    .contacto__contenido {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .portada__imagen img {
+        height: 300px;
+    }
+
+    .resenas__lista {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto__contenido {
+        gap: 25px;
+    }
+}
+
+/* DISEÑO RESPONSIVO: CELULARES */
+@media (max-width: 560px) {
+    .header__contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header__mensaje {
+        font-size: 0.82rem;
+    }
+
+    .navegacion__lista {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        padding: 13px 0;
+    }
+
+    .navegacion a {
+        font-size: 0.85rem;
+    }
+
+    .portada {
+        padding: 45px 0;
+    }
+
+    .portada__imagen img {
+        height: 230px;
+    }
+
+    .seccion {
+        padding: 55px 0;
+    }
+
+    .producto {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+
+    .resenas__lista {
+        grid-template-columns: 1fr;
+    }
+
+    .resena p {
+        min-height: auto;
+    }
+
+    .formulario {
+        padding: 20px;
+    }
+
+    .footer__contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+}

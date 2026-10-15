@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ElectroHogar: electrodomésticos para hacer tu casa más cómoda.">
+    <title>ElectroHogar | Tu casa, más fácil</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header" id="inicio">
+        <div class="contenedor header__contenido">
+            <a class="logo" href="#inicio" aria-label="ElectroHogar, ir al inicio">
+                <span class="logo__icono">E</span>
+                <span>electro<span class="logo__acento">hogar</span></span>
+            </a>
+            <p class="header__mensaje">Todo lo que tu casa necesita, en un solo lugar.</p>
+        </div>
+    </header>
+
+    <nav class="navegacion" aria-label="Navegación principal">
+        <div class="contenedor">
+            <ul class="navegacion__lista">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="portada">
+            <div class="contenedor portada__contenido">
+                <div class="portada__texto">
+                    <span class="etiqueta">EQUIPÁ TU HOGAR</span>
+                    <h1>La tecnología que hace tu vida <span>más simple.</span></h1>
+                    <p>Encontrá electrodomésticos prácticos, funcionales y pensados para acompañarte todos los días.</p>
+                    <a class="boton boton--principal" href="#productos">Ver productos <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="portada__imagen">
+                    <img
+                        src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1000&q=85"
+                        alt="Cocina moderna y luminosa equipada para el hogar">
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion productos" id="productos">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="etiqueta">NUESTRO CATÁLOGO</span>
+                    <h2>Productos destacados</h2>
+                    <p>Una selección para renovar tu hogar.</p>
+                </div>
+
+                <!-- Flexbox organiza las tarjetas y permite que pasen a otra fila -->
+                <div class="productos__lista">
+                    <article class="producto">
+                        <div class="producto__imagen">
+                            <img src="https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&w=800&q=85" alt="Heladera moderna de color plateado" loading="lazy">
+                            <span class="producto__tag">Destacado</span>
+                        </div>
+                        <div class="producto__info">
+                            <span class="producto__categoria">Cocina</span>
+                            <h3>Heladera familiar</h3>
+                            <p>Amplio espacio y diseño moderno para tu cocina.</p>
+                            <div class="producto__pie">
+                                <strong>$ 789.900</strong>
+                                <a href="#contacto" aria-label="Consultar por heladera familiar">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto">
+                        <div class="producto__imagen">
+                            <img src="https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&w=800&q=85" alt="Lavarropas de carga frontal" loading="lazy">
+                        </div>
+                        <div class="producto__info">
+                            <span class="producto__categoria">Lavado</span>
+                            <h3>Lavarropas automático</h3>
+                            <p>Programas simples para cuidar tu ropa cada día.</p>
+                            <div class="producto__pie">
+                                <strong>$ 549.900</strong>
+                                <a href="#contacto" aria-label="Consultar por lavarropas automático">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto">
+                        <div class="producto__imagen">
+                            <img src="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?auto=format&fit=crop&w=800&q=85" alt="Microondas moderno sobre una mesada" loading="lazy">
+                        </div>
+                        <div class="producto__info">
+                            <span class="producto__categoria">Cocina</span>
+                            <h3>Microondas digital</h3>
+                            <p>Una solución rápida y cómoda para tus comidas.</p>
+                            <div class="producto__pie">
+                                <strong>$ 189.900</strong>
+                                <a href="#contacto" aria-label="Consultar por microondas digital">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto">
+                        <div class="producto__imagen">
+                            <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85" alt="Ambiente de hogar moderno y confortable" loading="lazy">
+                        </div>
+                        <div class="producto__info">
+                            <span class="producto__categoria">Confort</span>
+                            <h3>Aspiradora compacta</h3>
+                            <p>Practicidad para mantener tus espacios limpios.</p>
+                            <div class="producto__pie">
+                                <strong>$ 129.900</strong>
+                                <a href="#contacto" aria-label="Consultar por aspiradora compacta">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto">
+                        <div class="producto__imagen">
+                            <img src="https://images.unsplash.com/photo-1570222094114-d054a817e56b?auto=format&fit=crop&w=800&q=85" alt="Pequeño electrodoméstico de cocina" loading="lazy">
+                        </div>
+                        <div class="producto__info">
+                            <span class="producto__categoria">Pequeños electrodomésticos</span>
+                            <h3>Licuadora de mesa</h3>
+                            <p>Ideal para preparar licuados y recetas en casa.</p>
+                            <div class="producto__pie">
+                                <strong>$ 79.900</strong>
+                                <a href="#contacto" aria-label="Consultar por licuadora de mesa">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="producto">
+                        <div class="producto__imagen">
+                            <img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=800&q=85" alt="Electrodoméstico pequeño para cocina" loading="lazy">
+                        </div>
+                        <div class="producto__info">
+                            <span class="producto__categoria">Cocina</span>
+                            <h3>Horno eléctrico</h3>
+                            <p>Una alternativa práctica para cocinar todos los días.</p>
+                            <div class="producto__pie">
+                                <strong>$ 159.900</strong>
+                                <a href="#contacto" aria-label="Consultar por horno eléctrico">Consultar</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="nota-precios">* Productos y precios ilustrativos para este proyecto educativo.</p>
+            </div>
+        </section>
+
+        <section class="nosotros" id="nosotros">
+            <div class="contenedor nosotros__contenido">
+                <div>
+                    <span class="etiqueta etiqueta--clara">SOBRE NOSOTROS</span>
+                    <h2>Tu hogar merece cosas buenas.</h2>
+                </div>
+                <p>En ElectroHogar creemos que los pequeños detalles hacen la diferencia. Por eso reunimos productos que ayudan a resolver las tareas cotidianas y hacen más cómodo cada espacio de tu casa.</p>
+            </div>
+        </section>
+
+        <section class="seccion resenas" id="resenas">
+            <div class="contenedor">
+                <div class="encabezado-seccion">
+                    <span class="etiqueta">EXPERIENCIAS</span>
+                    <h2>Lo que dicen nuestros clientes</h2>
+                    <p>Opiniones de ejemplo para la demostración del sitio.</p>
+                </div>
+
+                <!-- CSS Grid distribuye las reseñas en columnas adaptables -->
+                <div class="resenas__lista">
+                    <article class="resena">
+                        <div class="resena__estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <p>“Encontré lo que necesitaba y la atención fue muy amable.”</p>
+                        <h3>Lucía M.</h3>
+                        <span>Cliente</span>
+                    </article>
+                    <article class="resena">
+                        <div class="resena__estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <p>“Buena variedad de productos y precios claros. Muy recomendable.”</p>
+                        <h3>Marcos R.</h3>
+                        <span>Cliente</span>
+                    </article>
+                    <article class="resena">
+                        <div class="resena__estrellas" aria-label="5 de 5 estrellas">★★★★★</div>
+                        <p>“Me ayudaron a elegir el electrodoméstico indicado para mi casa.”</p>
+                        <h3>Carolina G.</h3>
+                        <span>Cliente</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion contacto" id="contacto">
+            <div class="contenedor contacto__contenido">
+                <div class="contacto__texto">
+                    <span class="etiqueta">ESTAMOS PARA AYUDARTE</span>
+                    <h2>¿Tenés alguna consulta?</h2>
+                    <p>Completá el formulario y dejanos tu mensaje. Queremos ayudarte a encontrar lo que necesitás.</p>
+                    <p class="contacto__dato">Respondemos tus consultas a través del correo electrónico.</p>
+                </div>
+
+                <!-- Reemplazar TU_ID por el identificador real entregado por Formspree -->
+                <form class="formulario" action="https://formspree.io/f/TU_ID" method="POST">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@correo.com" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required></textarea>
+
+                    <button class="boton boton--principal" type="submit">Enviar mensaje <span aria-hidden="true">→</span></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor footer__contenido">
+            <a class="logo logo--footer" href="#inicio">
+                <span class="logo__icono">E</span>
+                <span>electro<span class="logo__acento">hogar</span></span>
+            </a>
+            <p>© 2026 ElectroHogar. Proyecto educativo de desarrollo web.</p>
+            <a href="#inicio">Volver arriba ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
